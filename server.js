@@ -47,14 +47,14 @@ function keyauthRequest(params) {
 app.post('/api/init', async function(req, res) {
   try {
     var sessionid = genSession();
+    var hash = crypto.createHash('md5').update(KEYAUTH.secret).digest('hex');
     var result = await keyauthRequest({
       type: 'init',
       ver: KEYAUTH.version,
       name: KEYAUTH.appname,
       ownerid: KEYAUTH.ownerid,
-      sessionid: sessionid
-      hash: '98e5d9778b5f4dc97aa358cc68a6701f',
-
+      sessionid: sessionid,
+      hash: hash
     });
     if (result.success) {
       res.json({ success: true, sessionid: sessionid, message: result.message });
