@@ -53,6 +53,8 @@ app.post('/api/init', async function(req, res) {
       name: KEYAUTH.appname,
       ownerid: KEYAUTH.ownerid,
       sessionid: sessionid
+      hash: '98e5d9778b5f4dc97aa358cc68a6701f',
+
     });
     if (result.success) {
       res.json({ success: true, sessionid: sessionid, message: result.message });
