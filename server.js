@@ -9,9 +9,9 @@ app.use(express.json());
 
 // KeyAuth config
 const KEYAUTH = {
-  ownerid: 'LPZ6NXls3k',
-  appname: 'Veronxit\'s Application',
-  secret: '945ab325e0d39082612063e88069d63caea967c0db41b29c5c960c9d6151a528',
+  ownerid: 'DCMnTVTL6h',
+  appname: 'Veron Optimize\'s Application',
+  secret: '7cae8e8803e2ca7330561c68ab3b17761c09245361a95045224d14a1a36ffc69',
   version: '1.0'
 };
 
